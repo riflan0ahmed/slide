@@ -1,7 +1,6 @@
 import { FC, useEffect, useRef } from "react";
 import { When } from "react-if";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import ReactPlayer from "react-player";
 import IBlockVideo from "util/interface/video.interface";
 import Header from "components/shared/Header/Header";
 import classes from "./block.module.scss";
