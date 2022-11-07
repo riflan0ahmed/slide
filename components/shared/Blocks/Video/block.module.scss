@@ -29,15 +29,5 @@
                 @apply font-normal text-center max-w-4xl;
             }
         }
-
-        .nextButton {
-            @apply absolute bottom-0 left-1/2 right-1/2 py-4;
-
-            > svg {
-                @apply text-blue-500;
-                height: 100px;
-                width: 100px;
-            }
-        }
     }
 }

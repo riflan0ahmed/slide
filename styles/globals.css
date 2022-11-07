@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "embla.css";
 @import "react-multi-carousel/lib/styles.css";
+@import "react-multi-carousel.css";
 
 img,
 video {

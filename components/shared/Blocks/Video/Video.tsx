@@ -1,17 +1,13 @@
 import { FC, useEffect, useRef } from "react";
-import { When } from "react-if";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import IBlockVideo from "util/interface/video.interface";
 import Header from "components/shared/Header/Header";
 import classes from "./block.module.scss";
 
 interface BlockVideoProps {
     item: IBlockVideo;
-    scrollNext: any;
-    nextBtnEnabled: boolean;
 }
 
-const BlockVideo: FC<BlockVideoProps> = ({ scrollNext, nextBtnEnabled, item }) => {
+const BlockVideo: FC<BlockVideoProps> = ({ item }) => {
     const { videoURL, title, description } = item;
 
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -38,12 +34,6 @@ const BlockVideo: FC<BlockVideoProps> = ({ scrollNext, nextBtnEnabled, item }) =
 
                     <p className="h3">{description}</p>
                 </div>
-
-                <When condition={nextBtnEnabled}>
-                    <div className={classes.nextButton}>
-                        <MdKeyboardArrowDown onClick={() => scrollNext()} />
-                    </div>
-                </When>
             </div>
         </div>
     );

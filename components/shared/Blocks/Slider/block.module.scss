@@ -1,6 +1,22 @@
 .slider {
     @apply block relative;
 
+    > .image_mobile {
+        @apply block;
+        @apply md:hidden;
+    }
+
+    > .image_tablet {
+        @apply hidden;
+        @apply md:block;
+        @apply xl:hidden;
+    }
+
+    > .image_laptop {
+        @apply hidden;
+        @apply xl:block;
+    }
+
     > .overlay {
         @apply relative flex flex-col w-full h-screen;
 
@@ -10,27 +26,28 @@
 
             > h1 {
                 @apply mt-16 text-white text-4xl text-center;
-                @apply lg:mt-40 lg:mr-32 lg:text-7xl lg:ml-auto;
+                @apply md:mt-40;
+                @apply lg:mt-20 lg:mr-32 lg:text-7xl lg:ml-auto;
                 @apply xl:mr-52;
             }
 
-            > div {
-                // @apply max-w-md px-4 ml-auto;
-                // @apply sm:ml-auto sm:max-w-xl;
-                // @apply lg:mr-16 lg:max-w-3xl;
-                // @apply xl:max-w-4xl;
-                // @apply 2xl:mr-24 2xl:max-w-5xl;
-                @apply w-[900px] ml-auto mr-52;
-            }
-        }
+            > .carouselWrapper {
+                @apply relative block;
 
-        .prevButton {
-            @apply absolute bottom-0 left-1/2 right-1/2 py-4;
+                > .carousel {
+                    position: relative;
+                    @apply block ml-auto;
+                    @apply max-w-md;
+                    @apply sm:max-w-xl;
+                    @apply md:mr-12;
+                    @apply lg:max-w-3xl lg:mr-24;
+                    @apply xl:max-w-4xl;
+                    @apply 2xl:max-w-5xl 2xl:mr-40;
 
-            > svg {
-                @apply text-blue-500;
-                height: 100px;
-                width: 100px;
+                    .buttonGroup {
+                        @apply absolute top-1/3 -right-20 bg-white z-20;
+                    }
+                }
             }
         }
     }

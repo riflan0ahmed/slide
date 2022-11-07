@@ -11,6 +11,7 @@ export function getStaticProps() {
     };
 }
 
-export default function Home({ data }: any) {
+export default function Home() {
+    const data = Info;
     return <ViewHome data={data} />;
 }
